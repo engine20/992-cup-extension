@@ -1,0 +1,9 @@
+{
+  "Lua.workspace.library": [
+    "E:\\Program Files (x86)\\Steam\\steamapps\\common\\assettocorsa\\extension\\internal\\lua-sdk\\ac_car_scriptable_display",
+    "e:\\Program Files (x86)\\Steam\\steamapps\\common\\assettocorsa/extension/internal/lua-sdk/ac_car_scriptable_display"
+  ],
+  "Lua.workspace.preloadFileSize": 2000,
+  "Lua.runtime.version": "LuaJIT",
+  "Lua.runtime.builtin": {}
+}
