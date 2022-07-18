@@ -5,5 +5,11 @@
   ],
   "Lua.workspace.preloadFileSize": 2000,
   "Lua.runtime.version": "LuaJIT",
-  "Lua.runtime.builtin": {}
+  "Lua.runtime.builtin": {},
+  "vscode-lua-format.configPath": "E:\\Program Files (x86)\\Steam\\steamapps\\common\\assettocorsa\\content\\cars\\ng_porsche_992_cup\\extension\\.vscode\\.luaformat",
+  "Lua.diagnostics.disable": [
+    "undefined-doc-name",
+    "param-type-mismatch",
+    "assign-type-mismatch"
+  ]
 }
