@@ -81,7 +81,7 @@ end
 ---@param input number
 ---@return string
 M.twodigits = function(input)
-  return tonumber(input) < 10 and '0' .. tonumber(input) or (tonumber(input) >= 100 and '99' or tonumber(input))
+  return tonumber(input) < 10 and '0' .. tostring(input) or (tonumber(input) >= 100 and '99' or tostring(input))
 end
 ---Formats a value with given parameters
 ---@param input number
