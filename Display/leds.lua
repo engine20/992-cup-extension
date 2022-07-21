@@ -28,12 +28,13 @@ end
 local firstrun = true
 local blinkseed = 0
 
+---@diagnostic disable-next-line: lowercase-global
 function update(dt)
   local start_rpm = 7000
   local max_rpm = 8100
   if car.rpm > 8400 then
     blinkseed = blinkseed + dt
-    if math.floor(blinkseed * 7) % 2 == 1 then for i = 1, 8 do drawRpmLed(i, rgbm(0.05, 0.05, 1, 1)) end end
+    if math.floor(blinkseed * 7) % 2 == 1 then for i = 1, 8 do drawRpmLed(i, rgbm(0.1, 0.1, 1, 1)) end end
   else
     for i = 0, math.clamp((car.rpm - start_rpm) / ((max_rpm - start_rpm) / 8), 0, 8) do drawRpmLed(i) end
   end

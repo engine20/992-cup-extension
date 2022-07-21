@@ -92,14 +92,15 @@ local debugmessge = function(msg, desc) ac.setSystemMessage(msg, desc or math.ra
 local firstrun = true
 local timedelta = 0
 -- UPDATE LOOP--
+---@diagnostic disable-next-line: lowercase-global
 function update(dt)
   if car.isInPitlane then
-    display.image({image = 'texRL/Page_Speed.dds', pos = vec2(0, 0), size = vec2(512, 128)})
+    display.image({image = 'Display/texRL.zip::Page_Speed.dds', pos = vec2(0, 0), size = vec2(512, 128)})
     pcall(function()
       displayText(dec(car.speedKmh > 0.1 and car.speedKmh or 0, 2, ','), 350, -8, 2.3, 'bdp_fox', {1, 1, 1}, 'right')
     end)
   else
-    display.image({image = 'texRL/Page_Laptime.dds', pos = vec2(0, 0), size = vec2(512, 128)})
+    display.image({image = 'Display/texRL.zip::Page_Laptime.dds', pos = vec2(0, 0), size = vec2(512, 128)})
     pcall(function() displayText(timeformat(car.lapTimeMs, {':', '.'}), 350, -8, 2.3, 'bdp_fox', {1, 1, 1}, 'right') end)
     displayText(car.lapCount, 460, 55, 1, 'bdp_fox', {1, 1, 1}, 'center')
   end
