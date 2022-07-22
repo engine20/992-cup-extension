@@ -41,13 +41,12 @@ M.displayText = function(text, posx, posy, size, font, color, align)
     display.text({
       text = string.sub(text, i, i),
       pos = vec2((numeric and lastx or
-                   (alphabetic and lastx + (size ^ ((1 - size) / 8 + 1.15) * 10) - 5 or lastx + (Legacy and 5 or 0) +
-                     size ^ ((1 - size)))) - alignmentoffset,
-                 numeric and posy or (alphabetic and posy or posy + size * 10)),
+                   (alphabetic and lastx + (size ^ ((1 - size) / 8 + 1.15) * 10) - 5 or lastx + -1 + size ^ ((1 - size)))) -
+                   alignmentoffset, numeric and posy or (alphabetic and posy or posy + size * 4.5)),
       letter = vec2(numeric and digitswidth * size or (alphabetic and (alphabeticwidth) * size or
                       (symbolwidth +
                         (Legacy and ((string.sub(text, i, i) == '+' or string.sub(text, i, i) == '-') and 7 or -3) or 7)) *
-                      size), numeric and 84 * size or (alphabetic and 84 * size or 112 / 1.5 * size)),
+                      size), numeric and 47 * size or (alphabetic and 49 * size or 40 * size)),
       color = rgbm(color[1], color[2], color[3], 1),
       font = font,
       width = 46,
