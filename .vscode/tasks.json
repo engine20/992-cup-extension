@@ -7,7 +7,7 @@
       "label": "Build",
       "type": "shell",
       "command": "cmd",
-      "args": ["/c Display\\build.cmd"],
+      "args": ["/c build.cmd"],
       "problemMatcher": [],
       "options": {
         "cwd": "${workspaceFolder}"
